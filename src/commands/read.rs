@@ -2,10 +2,10 @@ use serenity::framework::standard::{macros::command, CommandResult};
 use serenity::model::prelude::*;
 use serenity::prelude::*;
 
-use regex::Regex;
 use std::fs::File;
 use std::io::Write;
 use std::path::Path;
+use std::fs;
 
 #[command]
 fn read(context: &mut Context, message: &Message) -> CommandResult {
@@ -44,6 +44,7 @@ fn read(context: &mut Context, message: &Message) -> CommandResult {
             }
             response.push_str("The image contains the following text: ");
             response.push_str(&get_response(&filename));
+            fs::remove_file(&filename);
         }
     }
     let _ = message.channel_id.say(&context.http, response);

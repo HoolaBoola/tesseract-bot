@@ -290,10 +290,8 @@ version = "0.1.0"
 dependencies = [
  "env_logger 0.7.1",
  "kankyo",
- "lazy_static",
  "leptess",
  "log",
- "regex",
  "serenity",
 ]
 

@@ -16,7 +16,7 @@ use serenity::{
 };
 use std::{collections::HashSet, env, sync::Arc};
 
-use commands::read::*;
+use commands::{help::*,read::*};
 
 struct ShardManagerContainer;
 
@@ -36,11 +36,9 @@ impl EventHandler for Handler {
     }
 }
 
-#[macro_use]
-extern crate lazy_static;
 
 #[group]
-#[commands(read, ping)]
+#[commands(read, ping, help)]
 struct General;
 
 fn main() {
