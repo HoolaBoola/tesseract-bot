@@ -2,6 +2,8 @@
 
 This bot was made with [serenity-rs](https://github.com/serenity-rs/serenity)
 
+Tesseract wrapped by [Leptess](https://houqp.github.io/leptess/leptess/index.html) (**make sure you install Leptonica and Tesseract**)
+
 For the bot to work, create a file called ".env" and enter the following input:
 
 ```
