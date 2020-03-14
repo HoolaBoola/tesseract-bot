@@ -42,7 +42,7 @@ fn read(context: &mut Context, message: &Message) -> CommandResult {
 
                 return Ok(());
             }
-            response.push_str("The image contains the following text: ");
+            response.push_str("The image contains the following text:\n\n");
             response.push_str(&get_response(&filename));
             fs::remove_file(&filename);
         }
